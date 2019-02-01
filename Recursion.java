@@ -9,6 +9,12 @@ public class Recursion{
 
  */
 
+private static double sqrtiter(double n, double tolerance){
+	double guess = n / 2;
+}
+
+
+
 private static double sqrthelp(double inp, double guess, double tolerance){
 	if ((inp * inp) / guess > tolerance){
 		return inp;
@@ -36,6 +42,10 @@ public static int fib(int n){
 /*As Per classwork*/
 public static ArrayList<Integer> makeAllSums(){
 	return new ArrayList<Integer>();
+}
+
+public static void main(String[] args) {
+	System.out.println(sqrt(100, 0.001));
 }
 
 }
