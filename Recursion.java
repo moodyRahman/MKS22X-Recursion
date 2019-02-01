@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Recursion{
 /*You may write additional private methods */
 
@@ -6,8 +8,21 @@ public class Recursion{
  *precondition: n is non-negative
 
  */
-public static double sqrt(double n, double tolerance){
 
+private static double sqrthelp(double inp, double guess, double tolerance){
+	if ((inp * inp) / guess > tolerance){
+		return inp;
+	}
+	else{
+		double newguess = 0.5 * (guess + (inp / guess));
+		return sqrthelp(guess, newguess, tolerance);
+	}
+}
+
+
+public static double sqrt(double n, double tolerance){
+	double guess = n / 2;
+	return sqrthelp(n, guess, tolerance);
 }
 
  /*Recursively find the n'th fibbonaci number in linear time
@@ -15,12 +30,12 @@ public static double sqrt(double n, double tolerance){
   *precondition: n is non-negative
   */
 public static int fib(int n){
-
+	return 5;
 }
 
 /*As Per classwork*/
 public static ArrayList<Integer> makeAllSums(){
-	
+	return new ArrayList<Integer>();
 }
 
 }
