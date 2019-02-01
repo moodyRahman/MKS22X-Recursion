@@ -11,6 +11,7 @@ public class Recursion{
 
 private static double sqrtiter(double n, double tolerance){
 	double guess = n / 2;
+	return 0.01;
 }
 
 
