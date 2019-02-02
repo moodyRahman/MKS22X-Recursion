@@ -20,10 +20,6 @@ private static double sqrthelp(double inp, double guess, double tolerance){
 	if ((inp * inp) / guess > tolerance){
 		return inp;
 	}
-	else{
-		double newguess = 0.5 * (guess + (inp / guess));
-		return sqrthelp(guess, newguess, tolerance);
-	}
 }
 
 
