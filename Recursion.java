@@ -38,12 +38,13 @@ public static double sqrt(double n, double tolerance){
   *precondition: n is non-negative
   */
 public static int fib(int n){
-	if (n == 0 || n == 1){
-		return 0;
-	}
-	else{
-		return fib(n - 1) + fib(n - 2);
-	}
+	return fibhelp(n, 0, 1);
+	// if (n == 0 || n == 1){
+	// 	return 0;
+	// }
+	// else{
+	// 	return fib(n - 1) + fib(n - 2);
+	// }
 }
 
 private static int fibhelp(int count, int oldnum, int newnum){
@@ -64,7 +65,8 @@ public static ArrayList<Integer> makeAllSums(){
 }
 
 public static void main(String[] args) {
-	System.out.println(sqrt(100, 0.00000000000000000001));
+	// System.out.println(sqrt(100, 0.00000000000000000001));
+	System.out.println(fib(7));
 }
 
 }
