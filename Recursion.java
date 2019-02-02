@@ -17,8 +17,11 @@ private static double sqrtiter(double n, double tolerance){
 
 
 private static double sqrthelp(double inp, double guess, double tolerance){
-	if ((inp * inp) / guess > tolerance){
+	if ((guess * guess) / inp < tolerance){
 		return inp;
+	}
+	else {
+
 	}
 }
 
