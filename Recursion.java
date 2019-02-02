@@ -46,6 +46,18 @@ public static int fib(int n){
 	}
 }
 
+private static int fibhelp(int count, int oldnum, int newnum){
+	if(count == 0){
+		return oldnum;
+	}
+	if (count == 1){
+		return newnum;
+	}
+	else{
+		return fibhelp(count-1, newnum, newnum + oldnum);
+	}
+}
+
 /*As Per classwork*/
 public static ArrayList<Integer> makeAllSums(){
 	return new ArrayList<Integer>();
