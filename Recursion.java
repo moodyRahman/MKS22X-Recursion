@@ -38,7 +38,12 @@ public static double sqrt(double n, double tolerance){
   *precondition: n is non-negative
   */
 public static int fib(int n){
-	return 5;
+	if (n == 0 || n == 1){
+		return 0;
+	}
+	else{
+		return fib(n - 1) + fib(n - 2);
+	}
 }
 
 /*As Per classwork*/
