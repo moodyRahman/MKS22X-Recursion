@@ -28,6 +28,9 @@ private static double sqrthelp(double inp, double guess, double tolerance){
 
 
 public static double sqrt(double n, double tolerance){
+	if (n == 0){
+		return 0.0;
+	}
 	double guess = n / 2 + 0.564;
 	// double guess = 500;
 	return sqrthelp(n, guess, tolerance);
@@ -65,8 +68,8 @@ public static ArrayList<Integer> makeAllSums(){
 }
 
 public static void main(String[] args) {
-	// System.out.println(sqrt(100, 0.00000000000000000001));
-	System.out.println(fib(7));
+	System.out.println(sqrt(5, 0.1));
+	// System.out.println(fib(7));
 }
 
 }
