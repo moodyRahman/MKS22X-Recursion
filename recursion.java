@@ -63,15 +63,16 @@ private static int fibhelp(int count, int oldnum, int newnum){
 }
 
 /*As Per classwork*/
-public static ArrayList<Integer> makeAllSums(){
-
-	return new ArrayList<Integer>();
+public static ArrayList<Integer> makeAllSums(int n){
+	ArrayList<Integer> out = new ArrayList<Integer>();
+	mkhelp(n, 0, out);
+	return out;
 }
 
-private static void makeAllSums(int n, int sum, ArrayList<Integer> allnums) {
+private static void mkhelp(int n, int sum, ArrayList<Integer> allnums) {
 	if (n > 0) {
-		makeAllSums(n - 1, sum + n, allnums);
-		makeAllSums(n - 1, sum, allnums);
+		mkhelp(n - 1, sum + n, allnums);
+		mkhelp(n - 1, sum, allnums);
 	}
 	if (n == 0) {
 		allnums.add(sum);
@@ -79,8 +80,7 @@ private static void makeAllSums(int n, int sum, ArrayList<Integer> allnums) {
 }
 
 public static void main(String[] args) {
-	System.out.println(sqrt(5, 0.1));
-	// System.out.println(fib(7));
+	System.out.println(makeAllSums(6));
 }
 
 }
