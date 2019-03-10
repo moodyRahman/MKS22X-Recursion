@@ -64,7 +64,18 @@ private static int fibhelp(int count, int oldnum, int newnum){
 
 /*As Per classwork*/
 public static ArrayList<Integer> makeAllSums(){
+
 	return new ArrayList<Integer>();
+}
+
+private static void makeAllSums(int n, int sum, ArrayList<Integer> allnums) {
+	if (n > 0) {
+		makeAllSums(n - 1, sum + n, allnums);
+		makeAllSums(n - 1, sum, allnums);
+	}
+	if (n == 0) {
+		allnums.add(sum);
+	}
 }
 
 public static void main(String[] args) {
